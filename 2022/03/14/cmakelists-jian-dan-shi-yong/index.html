@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="第一篇博客, pf&#39;s repository">
+    <meta name="keywords" content="CMakeLists简单使用, pf&#39;s repository">
     <meta name="description" content="我的脚印">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>第一篇博客 | pf&#39;s repository</title>
+    <title>CMakeLists简单使用 | pf&#39;s repository</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -446,12 +446,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">第一篇博客</h1>
+                    <h1 class="description center-align post-title">CMakeLists简单使用</h1>
                 </div>
             </div>
         </div>
@@ -567,8 +567,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/first/">
-                                <span class="chip bg-color">first</span>
+                            <a href="/tags/C-%E7%BC%96%E7%A8%8B/">
+                                <span class="chip bg-color">C++编程</span>
                             </a>
                         
                     </div>
@@ -583,28 +583,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-01-29
+                    2022-03-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-01-29
+                    2022-03-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.2k
+                    896
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    5 Min
+                    4 Min
                 </div>
                 
 
@@ -632,154 +632,163 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>这是我的第一篇博客，我很开心！！！</p>
-<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
-/*
-"#"声明后面的一行需要在预编译的时候转义
-include表明后面的是一个文件
-&lt;&gt;或者“”表示文件名
-iostream就是一个文件，在你安装C++环境时就已经存放到你的电脑里了
-*/
+                <h2 id="CMakelist的基本语法"><a href="#CMakelist的基本语法" class="headerlink" title="CMakelist的基本语法"></a>CMakelist的基本语法</h2><h3 id="例子：最小模板"><a href="#例子：最小模板" class="headerlink" title="例子：最小模板"></a>例子：最小模板</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cmake_minimum_required<span class="token punctuation">(</span>VERSION <span class="token number">3.20</span><span class="token punctuation">)</span>
+project<span class="token punctuation">(</span>chapter33<span class="token punctuation">)</span>
+add_executable<span class="token punctuation">(</span>chapter33 main.cpp<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-using namespace std;
-/*
-namespace是指标识符的各种可见范围
-这句话的意思是使用一个标准命名空间
-*/
+<h4 id="1-文档说明"><a href="#1-文档说明" class="headerlink" title="1. 文档说明"></a>1. 文档说明</h4><p>   Cmake的最小版本要求</p>
+   <pre class="line-numbers language-none"><code class="language-none">cmake_minimum_required(VERSION 3.20)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-int main()//主函数，也就是一个程序要运行的部分，int表示返回值的类型
-{
-    cout &lt;&lt; "Hello World!" &lt;&lt; endl;
-/*cout表示输出
-"&lt;&lt;"是流插入运算符，表示输出到控制台
-Hello World!是字符串，所以需要引号包起来
-endl表示换行
-*/
+<p>   确定工程的名字</p>
+   <pre class="line-numbers language-none"><code class="language-none">project(chapter33)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-    return 0;//返回值，这里返回0，分号代表一条语句结束，上一句也是同样的道理
+<p>   语法：project(projectname [cxx] [c] [java])</p>
+<p>   这个不是必须，但是最好写一下，这一行会引入两个变量XXX_BINARY_DIR (二进制文件保存路径)和 XXX_SOURCE_DIR(源代码保存路径)</p>
+<p>   生成可执行文件</p>
+   <pre class="line-numbers language-none"><code class="language-none">add_executable(chapter33 main.cpp)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-}//花括号之间的内容代表一个语句块，必须是一对一对的，不能出现单个的括号<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>   括号的内容分别是项目名字和编程文件的名字</p>
+<h4 id="2-需要添加库文件的时候"><a href="#2-需要添加库文件的时候" class="headerlink" title="2. 需要添加库文件的时候"></a>2. 需要添加库文件的时候</h4><p>   以opencv为例</p>
+   <pre class="line-numbers language-none"><code class="language-none">find_package(OpenCV 3.4 REQUIRED)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h4 id="总结：我很开心呢"><a href="#总结：我很开心呢" class="headerlink" title="总结：我很开心呢"></a>总结：我很开心呢</h4><h1 id="公式测试"><a href="#公式测试" class="headerlink" title="公式测试"></a>公式测试</h1><p>$$<br>a+b =1<br>$$</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>复习的第一个网页知识<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>one<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>one<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>font</span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>6<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>red<span class="token punctuation">"</span></span> <span class="token attr-name">face</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>楷体<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>这是常见标签的演示<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>font</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>这是h1标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>这是h2标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>这是h3标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">&gt;</span></span>这是h4标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h5</span><span class="token punctuation">&gt;</span></span>这是h5标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h5</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">&gt;</span></span>这是h6标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
-	
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">&gt;</span></span>这是粗体标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
-	
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">&gt;</span></span>这是斜体标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
-	
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u</span><span class="token punctuation">&gt;</span></span>这是下划线标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
-	
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>这是段落标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
-	
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>空<span class="token entity named-entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity named-entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity named-entity" title="&nbsp;">&amp;nbsp;</span>格<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>two<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>two<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
-	
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>html中特殊字符的使用与演示<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
-	
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">&gt;</span></span><span class="token entity named-entity" title="<">&amp;lt;</span>：这是小于号的演示<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">&gt;</span></span><span class="token entity named-entity" title=">">&amp;gt;</span>：这是大于号的演示<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">&gt;</span></span><span class="token entity named-entity" title="&amp;">&amp;amp;</span>:这是和号的演示<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">&gt;</span></span><span class="token entity named-entity" title="&quot;">&amp;quot;</span>：这是引号的演示<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">&gt;</span></span><span class="token entity named-entity" title="'">&amp;apos;</span>：这是撇号的演示<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">&gt;</span></span>
+<p>   find_package令CMake搜索所有名为Find.cmake的文件，3.2.0 REQUIRED给出需要的具体版本，以避免一台电脑安装了多个版本opencv而造成不必要的错误。通常情况下，通过设置CMAKE_PREFIX_PATH来设置CMake搜索路径，通常情况下不加也可以，但考虑到代码的可移植性，最好还是对搜索路径进行对应设置</p>
+   <pre class="line-numbers language-none"><code class="language-none">set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} "/usr/local/share/OpenCV")<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>html中文字列表标签的使用与演示<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span>  <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>有序的第一个标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>有序的第二个标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>有序的第三个标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">&gt;</span></span>无序列表的使用<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>square<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>无序列表的第一个标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>无序列表的第二个标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>无序列表的第三个标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">&gt;</span></span>定义列的使用<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">&gt;</span></span>定义列表的第一个<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">&gt;</span></span>这时定义列表的使用<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">&gt;</span></span>定义列表的第二个<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">&gt;</span></span>这是定义列表的使用<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">&gt;</span></span>这是定义语的行<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">&gt;</span></span>这是定义说明的行<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">&gt;</span></span>
+<p>   将目标来链接到库</p>
+   <pre class="line-numbers language-none"><code class="language-none">target_link_libraries( chapter33 ${OpenCV_LIBS} )<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>html中超链接的使用<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.baidu.com<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>百度一下<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#one<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>one<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#two<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>two<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">&gt;</span></span>
+<p>   使用整体案例</p>
+   <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cmake_minimum_required<span class="token punctuation">(</span>VERSION <span class="token number">3.20</span><span class="token punctuation">)</span>
+project<span class="token punctuation">(</span>chapter33<span class="token punctuation">)</span>
+find_package<span class="token punctuation">(</span>OpenCV <span class="token number">3.4</span> REQUIRED<span class="token punctuation">)</span>
+set<span class="token punctuation">(</span>CMAKE_CXX_STANDARD <span class="token number">14</span><span class="token punctuation">)</span>
+include_directories<span class="token punctuation">(</span><span class="token variable">${OpenCV_INCLUDE_DIRS}</span><span class="token punctuation">)</span>
+add_executable<span class="token punctuation">(</span>chapter33 main.cpp<span class="token punctuation">)</span>
+target_link_libraries<span class="token punctuation">(</span> chapter33 <span class="token variable">${OpenCV_LIBS}</span> <span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>html中的表格<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span> <span class="token attr-name">border</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1px<span class="token punctuation">"</span></span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>700px<span class="token punctuation">"</span></span> <span class="token attr-name">cellpadding</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>10px<span class="token punctuation">"</span></span> <span class="token attr-name">cellspacing</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0px<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>caption</span><span class="token punctuation">&gt;</span></span>这是表格的练习<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>caption</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>第一个表格<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>第一个表格内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span> <span class="token attr-name">bgcolor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>red<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>第二个表格<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>第二个表格内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">valign</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100px<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>第三个表格<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>第三个表格内容<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>表格中的单元格的合并<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span> <span class="token attr-name">border</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1px<span class="token punctuation">"</span></span> <span class="token attr-name">cellspacing</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0px<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">colspan</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">colspan</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>1.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>1.2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>1.3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>1.4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>2.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>2.2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>2.3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>2.4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="3-确定编程语言"><a href="#3-确定编程语言" class="headerlink" title="3. 确定编程语言"></a>3. 确定编程语言</h4>   <pre class="line-numbers language-none"><code class="language-none">set(CMAKE_CXX_STANDARD 11)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<p>   也可以通过add_definitions来设定</p>
+   <pre class="line-numbers language-none"><code class="language-none">add_definitions(-std=c++11)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>   确定编程语言的基本版本，如上说明是C++的11版</p>
+<h4 id="4-对程序进行调试"><a href="#4-对程序进行调试" class="headerlink" title="4. 对程序进行调试"></a>4. 对程序进行调试</h4>   <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">set</span><span class="token punctuation">(</span>CMAKE_BUILD_TYPE debug<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="基本模块说明："><a href="#基本模块说明：" class="headerlink" title="基本模块说明："></a>基本模块说明：</h3><h4 id="SET命令——用于设置变量，相当于为变量取别名"><a href="#SET命令——用于设置变量，相当于为变量取别名" class="headerlink" title="SET命令——用于设置变量，相当于为变量取别名"></a><strong>SET命令——用于设置变量，相当于为变量取别名</strong></h4><p>SET(CMAKE_BUILE_TYPE DEBUG) 设置编译类型debug 或者release。debug 版会生成相关调试信息，可以使用GDB 进行调试；release不会生成调试信息。当无法进行调试时查看此处是否设置为debug.</p>
+<p>SET(CMAKE_C_FLAGS_DEBUG “-g -Wall”) 设置编译器的类型</p>
+<p>CMAKE_C_FLAGS_DEBUG —- C 编译器</p>
+<p>CMAKE_CXX_FLAGS_DEBUG —- C++ 编译器</p>
+<p>基本模板说明</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">## This is a standard CMakeLists.txt template, including</span>
+<span class="token comment">## how to enable C++11 compiler option and how to set 'Release'</span>
+<span class="token comment">## target compile option</span>
+cmake_minimum_required<span class="token punctuation">(</span>VERSION <span class="token number">2.8</span><span class="token punctuation">)</span>
+project<span class="token punctuation">(</span>cmake_template<span class="token punctuation">)</span>
+ 
+ 
+<span class="token comment">############# Use message function to print information ############</span>
+message<span class="token punctuation">(</span>STATUS <span class="token string">"CMake version: <span class="token variable">${CMAKE_VERSION}</span>"</span><span class="token punctuation">)</span>
+<span class="token comment">############ enable C++11 compiler###############</span>
+<span class="token comment">## Method 1</span>
+include<span class="token punctuation">(</span>CheckCXXCompilerFlag<span class="token punctuation">)</span>
+CHECK_CXX_COMPILER_FLAG<span class="token punctuation">(</span><span class="token string">"-std=c++11"</span> COMPILER_SUPPORTS_CXX11<span class="token punctuation">)</span>
+CHECK_CXX_COMPILER_FLAG<span class="token punctuation">(</span><span class="token string">"-std=c++0x"</span> COMPILER_SUPPORTS_CXX0X<span class="token punctuation">)</span>
+if<span class="token punctuation">(</span>COMPILER_SUPPORTS_CXX11<span class="token punctuation">)</span>
+    set<span class="token punctuation">(</span>CMAKE_CXX_FLAGS <span class="token string">"<span class="token variable">${CMAKE_CXX_FLAGS}</span> -std=c++11"</span><span class="token punctuation">)</span>
+elseif<span class="token punctuation">(</span>COMPILER_SUPPORTS_CXX0X<span class="token punctuation">)</span>
+    set<span class="token punctuation">(</span>CMAKE_CXX_FLAGS <span class="token string">"<span class="token variable">${CMAKE_CXX_FLAGS}</span> -std=c++0x"</span><span class="token punctuation">)</span>
+else<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    message<span class="token punctuation">(</span>WARNING <span class="token string">"The compiler <span class="token variable">${CMAKE_CXX_COMPILER}</span> has no C++11 support."</span><span class="token punctuation">)</span>
+    message<span class="token punctuation">(</span>STATUS <span class="token string">"Please use a different C++ compiler."</span><span class="token punctuation">)</span>
+endif<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">## Method 2</span>
+set<span class="token punctuation">(</span>CMAKE_CXX_STANDARD <span class="token number">11</span><span class="token punctuation">)</span>
+ 
+<span class="token comment">############ #enable warnings##################</span>
+set<span class="token punctuation">(</span>CMAKE_CXX_FLAGS <span class="token string">"<span class="token variable">${CMAKE_CXX_FLAGS}</span> -fPIC -Wall"</span><span class="token punctuation">)</span>
+ 
+<span class="token comment">#############Set cmake compiler options##############</span>
+<span class="token comment">## Method 1</span>
+set<span class="token punctuation">(</span>CMAKE_BUILD_TYPE <span class="token string">"Release"</span><span class="token punctuation">)</span>
+<span class="token comment">## Method 2</span>
+IF<span class="token punctuation">(</span>NOT CMAKE_BUILD_TYPE<span class="token punctuation">)</span>
+  SET<span class="token punctuation">(</span>CMAKE_BUILD_TYPE RelWithDebInfo CACHE STRING
+      <span class="token string">"Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel."</span>
+      FORCE<span class="token punctuation">)</span>
+ENDIF<span class="token punctuation">(</span>NOT CMAKE_BUILD_TYPE<span class="token punctuation">)</span>
+<span class="token comment">################## Some useful arguments ##########################</span>
+set<span class="token punctuation">(</span>CMAKE_INCLUDE_CURRENT_DIR ON<span class="token punctuation">)</span>
+<span class="token comment">##########</span>
+<span class="token comment">##Build###</span>
+<span class="token comment">##########</span>
+add_library<span class="token punctuation">(</span>lib hello.cpp<span class="token punctuation">)</span>
+
+add_executable<span class="token punctuation">(</span>main main.cpp<span class="token punctuation">)</span>
+target_link_libraries<span class="token punctuation">(</span>main <span class="token variable">${LINK_LIBRARIES}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="使用opencv库的说明"><a href="#使用opencv库的说明" class="headerlink" title="使用opencv库的说明"></a>使用opencv库的说明</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cmake_minimum_required<span class="token punctuation">(</span>VERSION <span class="token number">2.8</span>.12<span class="token punctuation">)</span>
+project<span class="token punctuation">(</span>OpenCV_test<span class="token punctuation">)</span>
+<span class="token comment">#find packages</span>
+find_package<span class="token punctuation">(</span>OpenCV REQUIRED<span class="token punctuation">)</span>
+ 
+<span class="token comment">#include headers</span>
+include_directories<span class="token punctuation">(</span><span class="token variable">${OpenCV_INCLUDE_DIRS}</span><span class="token punctuation">)</span>
+ 
+<span class="token comment">#target generation</span>
+add_executable<span class="token punctuation">(</span>OpenCV_test main.cpp<span class="token punctuation">)</span>
+<span class="token comment">#link libraries</span>
+target_link_libraries<span class="token punctuation">(</span>OpenCV_test <span class="token variable">${OpenCV_LIBS}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="使用eigen库的模板说明"><a href="#使用eigen库的模板说明" class="headerlink" title="使用eigen库的模板说明"></a>使用eigen库的模板说明</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cmake_minimum_required<span class="token punctuation">(</span>VERSION <span class="token number">2.8</span>.12<span class="token punctuation">)</span>
+project<span class="token punctuation">(</span>XXX<span class="token punctuation">)</span>
+
+<span class="token comment">#find packages</span>
+find_package<span class="token punctuation">(</span>Eigen3 REQUIRED<span class="token punctuation">)</span>
+
+<span class="token comment">#include headers</span>
+include_directories<span class="token punctuation">(</span><span class="token variable">${EIGEN3_INCLUDE_DIR}</span><span class="token punctuation">)</span>
+<span class="token comment">#target generation</span>
+add_executable<span class="token punctuation">(</span>XXX main.cpp<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="复杂项目下编译和构建"><a href="#复杂项目下编译和构建" class="headerlink" title="复杂项目下编译和构建"></a>复杂项目下编译和构建</h4><p>目录结构如下：</p>
+<blockquote>
+<p>./demo””</p>
+<p> CMakeLists.txt</p>
+<p> main.cpp</p>
+<p> math”/</p>
+<p>CMakeLists.txt</p>
+<p>MathFunctions.cpp</p>
+<p>MathFunctions.h”</p>
+</blockquote>
+<p>则相应的CMakelist的书写规则</p>
+<p>第一个为:</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cmake_minimum_required <span class="token punctuation">(</span>VERSION <span class="token number">2.8</span><span class="token punctuation">)</span>
+project<span class="token punctuation">(</span>demo<span class="token punctuation">)</span>
+aux_source_directory<span class="token punctuation">(</span>. DIR_SRCS<span class="token punctuation">)</span>
+<span class="token comment"># 添加math子目录</span>
+add_subdirectory<span class="token punctuation">(</span>math<span class="token punctuation">)</span>
+<span class="token comment"># 指定生成目标</span>
+add_executable<span class="token punctuation">(</span>demo <span class="token variable">${DIR_SRCS}</span><span class="token punctuation">)</span>
+<span class="token comment"># 添加链接库</span>
+target_link_libraries<span class="token punctuation">(</span>demo MathFunctions<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>第二个为:</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">aux_source_directory<span class="token punctuation">(</span>. DIR_LIB_SRCS<span class="token punctuation">)</span>
+<span class="token comment"># 生成链接库</span>
+add_library<span class="token punctuation">(</span>MathFunctions <span class="token variable">${DIR_LIB_SRCS}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="C-小知识"><a href="#C-小知识" class="headerlink" title="C++小知识"></a>C++小知识</h2><p>C++程序文件的额后缀与所运行的具体编译器有关，常见的有：.cc   .cxx    .cpp   .cp    .C   .c++</p>
+<p>这几种后缀名没有区别，如果编译器支持的话，哪种后缀都是一样的，在C++ Primer上给出如下说明：</p>
+<blockquote>
+<p>Unix uses: C, cc, cxx, c</p>
+<p>GNU C++ uses: C, cc, cxx, cpp, c++</p>
+<p>Digital Mars uses: cpp, cxx</p>
+<p>Borland C++ uses: cpp</p>
+<p>Watcom uses: cpp</p>
+<p>Microsoft Visual C++ uses: cpp, cxx, cc</p>
+<p>Metrowerks CodeWarrior uses: cpp, cp, cc, cxx, c++</p>
+</blockquote>
+<p><strong>参考自CPP，第五版p8</strong></p>
 
                 
             </div>
@@ -806,7 +815,7 @@ endl表示换行
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://feipf2020.github.io/2022/01/29/di-yi-pian-bo-ke/">https://feipf2020.github.io/2022/01/29/di-yi-pian-bo-ke/</a>
+                    <a href="https://feipf2020.github.io/2022/03/14/cmakelists-jian-dan-shi-yong/">https://feipf2020.github.io/2022/03/14/cmakelists-jian-dan-shi-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -844,8 +853,8 @@ endl表示换行
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/first/">
-                                    <span class="chip bg-color">first</span>
+                                <a href="/tags/C-%E7%BC%96%E7%A8%8B/">
+                                    <span class="chip bg-color">C++编程</span>
                                 </a>
                             
                         </div>
@@ -1015,29 +1024,30 @@ endl表示换行
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2022/02/16/shu-ju-jie-gou-zhi-er-cha-shu/">
+                <a href="/2022/03/14/cmakelists-jian-dan-shi-yong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="数据结构之二叉树">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="CMakeLists简单使用">
                         
-                        <span class="card-title">数据结构之二叉树</span>
+                        <span class="card-title">CMakeLists简单使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            基于linux下的C++编译运行方面步骤
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1046,11 +1056,12 @@ endl表示换行
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
+                    <a href="/tags/C-%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">C++编程</span>
                     </a>
                     
                 </div>
@@ -1064,24 +1075,24 @@ endl表示换行
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/29/hello-world/">
+                <a href="/2022/03/14/ben-zhan-shuo-ming/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="本站说明">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">本站说明</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            本站介绍及规则说明
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-14
                             </span>
                         <span class="publish-author">
                             
@@ -1090,6 +1101,14 @@ endl表示换行
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BD%BF%E7%94%A8%E5%BF%85%E7%9C%8B/">
+                        <span class="chip bg-color">使用必看</span>
+                    </a>
+                    
                 </div>
                 
             </div>

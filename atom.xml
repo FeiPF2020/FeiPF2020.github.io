@@ -6,7 +6,7 @@
   <link href="https://feipf2020.github.io/atom.xml" rel="self"/>
   
   <link href="https://feipf2020.github.io/"/>
-  <updated>2022-02-16T04:54:02.910Z</updated>
+  <updated>2022-03-14T13:42:58.670Z</updated>
   <id>https://feipf2020.github.io/</id>
   
   <author>
@@ -15,6 +15,78 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CMakeLists简单使用</title>
+    <link href="https://feipf2020.github.io/2022/03/14/cmakelists-jian-dan-shi-yong/"/>
+    <id>https://feipf2020.github.io/2022/03/14/cmakelists-jian-dan-shi-yong/</id>
+    <published>2022-03-14T13:28:31.000Z</published>
+    <updated>2022-03-14T13:42:58.670Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;CMakelist的基本语法&quot;&gt;&lt;a href=&quot;#CMakelist的基本语法&quot; class=&quot;headerlink&quot; title=&quot;CMakelist的基本语法&quot;&gt;&lt;/a&gt;CMakelist的基本语法&lt;/h2&gt;&lt;h3 id=&quot;例子：最小模板&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="C++编程" scheme="https://feipf2020.github.io/tags/C-%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本站说明</title>
+    <link href="https://feipf2020.github.io/2022/03/14/ben-zhan-shuo-ming/"/>
+    <id>https://feipf2020.github.io/2022/03/14/ben-zhan-shuo-ming/</id>
+    <published>2022-03-14T12:27:46.000Z</published>
+    <updated>2022-03-14T13:45:21.506Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;欢迎各位小伙伴访问我的小站，&lt;/p&gt;
+&lt;p&gt;也欢迎同行加我联系方式。&lt;/p&gt;
+&lt;p&gt;有朋自远方来，不亦乐乎，嘿嘿嘿。&lt;/p&gt;
+&lt;h3 id=&quot;建站目的&quot;&gt;&lt;a href=&quot;#建站目的&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="使用必看" scheme="https://feipf2020.github.io/tags/%E4%BD%BF%E7%94%A8%E5%BF%85%E7%9C%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络的基本概念理解</title>
+    <link href="https://feipf2020.github.io/2022/03/14/wang-luo-de-ji-ben-gai-nian-li-jie/"/>
+    <id>https://feipf2020.github.io/2022/03/14/wang-luo-de-ji-ben-gai-nian-li-jie/</id>
+    <published>2022-03-14T12:06:42.000Z</published>
+    <updated>2022-03-14T12:19:38.194Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;基本网络知识介绍&quot;&gt;&lt;a href=&quot;#基本网络知识介绍&quot; class=&quot;headerlink&quot; title=&quot;基本网络知识介绍&quot;&gt;&lt;/a&gt;基本网络知识介绍&lt;/h2&gt;&lt;h3 id=&quot;1-网关和路由器的区别&quot;&gt;&lt;a href=&quot;#1-网关和路由器的区别&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="网络" scheme="https://feipf2020.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>数据结构之二叉树</title>
