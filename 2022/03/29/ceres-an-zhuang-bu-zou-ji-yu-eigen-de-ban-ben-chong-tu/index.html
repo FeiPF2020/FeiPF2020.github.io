@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据结构之二叉树, pf&#39;s repository">
+    <meta name="keywords" content="Ceres安装步骤及与Eigen的版本冲突, pf&#39;s repository">
     <meta name="description" content="我的脚印">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据结构之二叉树 | pf&#39;s repository</title>
+    <title>Ceres安装步骤及与Eigen的版本冲突 | pf&#39;s repository</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -446,12 +446,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据结构之二叉树</h1>
+                    <h1 class="description center-align post-title">Ceres安装步骤及与Eigen的版本冲突</h1>
                 </div>
             </div>
         </div>
@@ -567,14 +567,27 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">数据结构</span>
+                            <a href="/tags/Ceres/">
+                                <span class="chip bg-color">Ceres</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/">
+                                <span class="chip bg-color">优化问题</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/SLAM%E6%8A%80%E6%9C%AF/" class="post-category">
+                                SLAM技术
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -583,21 +596,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-02-16
+                    2022-03-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-02-16
+                    2022-03-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    284
                 </div>
                 
 
@@ -632,7 +645,41 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="Ceres安装步骤及与Eigen的版本冲突"><a href="#Ceres安装步骤及与Eigen的版本冲突" class="headerlink" title="Ceres安装步骤及与Eigen的版本冲突"></a>Ceres安装步骤及与Eigen的版本冲突</h1><hr>
+<blockquote>
+<p>安装的ceres库版本，以及网上大多数教程安装的版本都会和eigen3（3.3.7）有冲突，编译时会报错误.</p>
+<p>解决办法：这里换成1.14.0版本的ceres问题得以解决。</p>
+</blockquote>
+<h2 id="1-先删除之前的ceres-solver："><a href="#1-先删除之前的ceres-solver：" class="headerlink" title="1.先删除之前的ceres-solver："></a>1.先删除之前的ceres-solver：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">rm</span> -r /usr/local/lib/cmake/Ceres
+<span class="token function">sudo</span> <span class="token function">rm</span> -rf /usr/local/include/ceres /usr/local/lib/libceres.a
+<span class="token function">sudo</span> <span class="token function">rm</span> -r /usr/local/share/Ceres<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>删除掉一些旧版本ceres的文件，否则直接安装清理不掉，依然会报错</p>
+<ul>
+<li>/usr/local/include中的ceres文件夹直接删掉</li>
+<li>/usr/local/lib下的libceres.a</li>
+<li>/usr/local/lib/cmake/Ceres 下有关ceres的全都删掉</li>
+<li>/usr/local/share/Ceres 文件夹删掉</li>
+</ul>
+<p>上面四点中，若是没有的话就不必删了<br>如果怕还有残余，则在终端：</p>
+<p>locate ceres </p>
+<p>locate Ceres </p>
+<p>主要看usr底下还有没有关于ceres的，若有再</p>
+</blockquote>
+<h2 id="2-下载ceres-solver-1-14-0"><a href="#2-下载ceres-solver-1-14-0" class="headerlink" title="2.下载ceres-solver-1.14.0"></a>2.下载ceres-solver-1.14.0</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> ceres-solver.org/ceres-solver-1.14.0.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="3-解压"><a href="#3-解压" class="headerlink" title="3.解压"></a>3.解压</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">tar</span> xvf ceres-solver-1.14.0.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="4-编译-装库的步骤基本类似"><a href="#4-编译-装库的步骤基本类似" class="headerlink" title="4.编译(装库的步骤基本类似)"></a>4.编译(装库的步骤基本类似)</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ceres-solver-1.14.0
+<span class="token function">mkdir</span> build
+<span class="token builtin class-name">cd</span> build
+cmake <span class="token punctuation">..</span>
+<span class="token function">make</span> -j4
+
+<span class="token function">make</span> <span class="token builtin class-name">test</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="5-安装"><a href="#5-安装" class="headerlink" title="5.安装"></a>5.安装</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -658,7 +705,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://feipf2020.github.io/2022/02/16/shu-ju-jie-gou-zhi-er-cha-shu/">https://feipf2020.github.io/2022/02/16/shu-ju-jie-gou-zhi-er-cha-shu/</a>
+                    <a href="https://feipf2020.github.io/2022/03/29/ceres-an-zhuang-bu-zou-ji-yu-eigen-de-ban-ben-chong-tu/">https://feipf2020.github.io/2022/03/29/ceres-an-zhuang-bu-zou-ji-yu-eigen-de-ban-ben-chong-tu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -696,8 +743,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">数据结构</span>
+                                <a href="/tags/Ceres/">
+                                    <span class="chip bg-color">Ceres</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/">
+                                    <span class="chip bg-color">优化问题</span>
                                 </a>
                             
                         </div>
@@ -871,29 +922,33 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2022/03/14/wang-luo-de-ji-ben-gai-nian-li-jie/">
+                <a href="/2022/03/29/slam-ge-ge-ku-wen-jian-de-bao-han-shi-yong-fang-fa-ju-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="网络的基本概念理解">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="SLAM各个库文件的包含使用方法举例">
                         
-                        <span class="card-title">网络的基本概念理解</span>
+                        <span class="card-title">SLAM各个库文件的包含使用方法举例</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            阐述IP地址，网关等基本网络概念
+                            Pangolin、Eigen、Sophus、Opencv、Ceres 等库在CmakeLists.txt中的使用
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-14
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-29
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            wpf
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/SLAM%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    SLAM技术
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -901,8 +956,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C/">
-                        <span class="chip bg-color">网络</span>
+                    <a href="/tags/%E5%BA%93%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8/">
+                        <span class="chip bg-color">库文件使用</span>
                     </a>
                     
                 </div>
@@ -916,29 +971,33 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/29/di-yi-pian-bo-ke/">
+                <a href="/2022/03/28/linux-ying-wei-da-xian-qia-pei-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="第一篇博客">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Linux英伟达显卡配置">
                         
-                        <span class="card-title">第一篇博客</span>
+                        <span class="card-title">Linux英伟达显卡配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            第一篇博客吼吼哈嘿
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-28
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            wpf
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-category">
+                                    环境配置
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -946,8 +1005,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/first/">
-                        <span class="chip bg-color">first</span>
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/NVIDIA/">
+                        <span class="chip bg-color">NVIDIA</span>
                     </a>
                     
                 </div>
