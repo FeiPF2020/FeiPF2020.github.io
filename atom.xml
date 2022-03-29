@@ -125,7 +125,7 @@
     <link href="https://feipf2020.github.io/2022/03/14/cmakelists-jian-dan-shi-yong/"/>
     <id>https://feipf2020.github.io/2022/03/14/cmakelists-jian-dan-shi-yong/</id>
     <published>2022-03-14T13:28:31.000Z</published>
-    <updated>2022-03-17T06:06:24.573Z</updated>
+    <updated>2022-03-29T12:07:57.197Z</updated>
     
     
       
@@ -138,8 +138,12 @@
     
     
     
+    <category term="C++" scheme="https://feipf2020.github.io/categories/C/"/>
     
-    <category term="C++编程 Linux" scheme="https://feipf2020.github.io/tags/C-%E7%BC%96%E7%A8%8B-Linux/"/>
+    
+    <category term="C++编程" scheme="https://feipf2020.github.io/tags/C-%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://feipf2020.github.io/tags/Linux/"/>
     
   </entry>
   
