@@ -6,7 +6,7 @@
   <link href="https://feipf2020.github.io/atom.xml" rel="self"/>
   
   <link href="https://feipf2020.github.io/"/>
-  <updated>2022-03-29T11:57:19.257Z</updated>
+  <updated>2022-03-31T14:50:49.548Z</updated>
   <id>https://feipf2020.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高斯牛顿法求解拟合问题</title>
+    <link href="https://feipf2020.github.io/2022/03/31/gao-si-niu-dun-fa-qiu-jie-ni-he-wen-ti/"/>
+    <id>https://feipf2020.github.io/2022/03/31/gao-si-niu-dun-fa-qiu-jie-ni-he-wen-ti/</id>
+    <published>2022-03-31T14:48:50.000Z</published>
+    <updated>2022-03-31T14:50:49.548Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;高斯牛顿法求解拟合问题&quot;&gt;&lt;a href=&quot;#高斯牛顿法求解拟合问题&quot; class=&quot;headerlink&quot; title=&quot;高斯牛顿法求解拟合问题&quot;&gt;&lt;/a&gt;高斯牛顿法求解拟合问题&lt;/h1&gt;&lt;h2 id=&quot;1-1问题描述：&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="SLAM技术" scheme="https://feipf2020.github.io/categories/SLAM%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="优化算法" scheme="https://feipf2020.github.io/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="SLAM技术" scheme="https://feipf2020.github.io/tags/SLAM%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python画图的库之matplotlib使用一</title>
+    <link href="https://feipf2020.github.io/2022/03/31/python-hua-tu-de-ku-zhi-matplotlib-shi-yong-yi/"/>
+    <id>https://feipf2020.github.io/2022/03/31/python-hua-tu-de-ku-zhi-matplotlib-shi-yong-yi/</id>
+    <published>2022-03-31T14:38:37.000Z</published>
+    <updated>2022-03-31T14:46:11.061Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Python画图的库之matplotlib使用一&quot;&gt;&lt;a href=&quot;#Python画图的库之matplotlib使用一&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://feipf2020.github.io/categories/Python/"/>
+    
+    
+    <category term="画图" scheme="https://feipf2020.github.io/tags/%E7%94%BB%E5%9B%BE/"/>
+    
+    <category term="python" scheme="https://feipf2020.github.io/tags/python/"/>
+    
+    <category term="工具技术" scheme="https://feipf2020.github.io/tags/%E5%B7%A5%E5%85%B7%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>SLAM各个库文件的包含使用方法举例</title>

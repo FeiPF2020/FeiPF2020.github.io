@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="网络的基本概念理解, pf&#39;s repository">
+    <meta name="keywords" content="高斯牛顿法求解拟合问题, pf&#39;s repository">
     <meta name="description" content="我的脚印">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>网络的基本概念理解 | pf&#39;s repository</title>
+    <title>高斯牛顿法求解拟合问题 | pf&#39;s repository</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -446,12 +446,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">网络的基本概念理解</h1>
+                    <h1 class="description center-align post-title">高斯牛顿法求解拟合问题</h1>
                 </div>
             </div>
         </div>
@@ -567,14 +567,27 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BD%91%E7%BB%9C/">
-                                <span class="chip bg-color">网络</span>
+                            <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">优化算法</span>
+                            </a>
+                        
+                            <a href="/tags/SLAM%E6%8A%80%E6%9C%AF/">
+                                <span class="chip bg-color">SLAM技术</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/SLAM%E6%8A%80%E6%9C%AF/" class="post-category">
+                                SLAM技术
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -583,28 +596,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-03-14
+                    2022-03-31
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-03-14
+                    2022-03-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    283
+                    993
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    5 Min
                 </div>
                 
 
@@ -632,29 +645,148 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="基本网络知识介绍"><a href="#基本网络知识介绍" class="headerlink" title="基本网络知识介绍"></a>基本网络知识介绍</h2><h3 id="1-网关和路由器的区别"><a href="#1-网关和路由器的区别" class="headerlink" title="1. 网关和路由器的区别"></a>1. 网关和路由器的区别</h3><blockquote>
-<p>‘网关’一个大概念，不具体特指一类产品，只要连接两个不同的网络的设备都可以叫网关；更多的从网络的角度进行阐述；</p>
-<p>‘路由器’一般特指能够实现路由寻找和转发的特定类产品，路由器很显然能够实现网关的功能。电信行业说的‘路由器’又和家用的‘路由器’不一样；</p>
-<p>路由器可以实现网关的功能。</p>
+                <h1 id="高斯牛顿法求解拟合问题"><a href="#高斯牛顿法求解拟合问题" class="headerlink" title="高斯牛顿法求解拟合问题"></a>高斯牛顿法求解拟合问题</h1><h2 id="1-1问题描述："><a href="#1-1问题描述：" class="headerlink" title="1.1问题描述："></a>1.1问题描述：</h2><p>针对这样一个问题，</p>
+<blockquote>
+<p>$$<br>y = exp(ax^2+bx+c)+w<br>\<br>w \longrightarrow (0,\sigma^2) \tag{1}<br>$$</p>
+<p>估计参数a,b,c，已经知道的是点对（x，y）</p>
 </blockquote>
-<h3 id="2-IPv4和IPv6的区别"><a href="#2-IPv4和IPv6的区别" class="headerlink" title="2. IPv4和IPv6的区别"></a>2. IPv4和IPv6的区别</h3><blockquote>
-<p>1.定义不同</p>
-<p>ipv4是点分十进制，32位，8位隔开，共有五类地址</p>
-<p>ipv6是冒分16进制，128位，16位隔开</p>
-<p>ipv6相比于ipv4的地址更丰富可以实现地球上的每一粒沙子的编码</p>
-</blockquote>
-<h3 id="3-DNS服务器"><a href="#3-DNS服务器" class="headerlink" title="3. DNS服务器"></a>3. DNS服务器</h3><blockquote>
-<p>由昵称转为对应的IP地址</p>
-</blockquote>
-<h3 id="4-公网IP"><a href="#4-公网IP" class="headerlink" title="4. 公网IP"></a>4. 公网IP</h3><blockquote>
-<p>链接互联网的IP地址，唯一的</p>
-</blockquote>
-<h3 id="5-路由器"><a href="#5-路由器" class="headerlink" title="5.路由器"></a>5.路由器</h3><blockquote>
-<p>主要是形成链路，最优化发送的解决方案</p>
-</blockquote>
-<h3 id="6-DHCP协议"><a href="#6-DHCP协议" class="headerlink" title="6.DHCP协议"></a>6.DHCP协议</h3><blockquote>
-<p>用来实现同一公网IP的各个设备的区分和标号</p>
-</blockquote>
+<h2 id="1-2代码如下："><a href="#1-2代码如下：" class="headerlink" title="1.2代码如下："></a>1.2代码如下：</h2><pre class="line-numbers language-C++" data-language="C++"><code class="language-C++">//代码基于Clion，C++14
+#include &lt;iostream&gt;
+#include &lt;chrono&gt;
+#include &lt;opencv2/opencv.hpp&gt;
+#include &lt;Eigen/Core&gt;
+#include &lt;Eigen/Dense&gt;
+using namespace std;
+using namespace Eigen;
+
+int main() {
+    double ar = 1.0,br = 2.0,cr = 1.0;//真值
+    double ae = 2.0,be = -1.0,ce = 5.0;//初值
+    
+    int N =100;//生成噪声的点数
+    double w_sigma = 1.0;//高斯白噪声
+    double inv_sigma = 1.0/w_sigma;
+    cv::RNG rng;//随机数的对象
+    vector&lt;double&gt; x_data,y_data;
+    for (int i = 0; i &lt; N; i++) {
+        double x = i/100.0;
+        x_data.push_back(x);
+        y_data.push_back(exp(ar * x * x + br * x + cr) + rng.gaussian(w_sigma * w_sigma)); 
+    }
+    //保存x_data,y_data数据,用作画图
+//    ofstream f("/home/wpf/SLAM/review_slam2/CPP_test/chapter0/optimization/xy1.txt",ios::app);
+//    for (int i = 0; i &lt; N; ++i) {
+//        f&lt;&lt;x_data[i]&lt;&lt;" ";
+//    }
+//    cout&lt;&lt;endl;
+//    for (int i = 0; i &lt; N; ++i) {
+//        f&lt;&lt;y_data[i]&lt;&lt;" ";
+//    }
+
+     int iteration = 100;//迭代次数
+    double cost = 0,lastcost = 0;
+    chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
+    for (int iter = 0; iter &lt; iteration; iter++) {
+        Eigen::Matrix3d H = Eigen::Matrix3d ::Zero();
+        Eigen::Vector3d b = Eigen::Vector3d ::Zero();
+        cost = 0;
+		//开始迭代
+        for (int i = 0; i &lt; N; i++) {
+            double xi =x_data[i],yi =y_data[i];
+            double error = yi - exp(ae*xi*xi+be*xi+ce);
+            Eigen::Vector3d J;
+            J[0] = -xi*xi*exp(ae*xi*xi+be*xi+ce);
+            J[1] = -xi*exp(ae*xi*xi+be*xi+ce);
+            J[2] = -exp(ae*xi*xi+be*xi+ce);
+            //顺序不能变
+            H += inv_sigma*inv_sigma*J*J.transpose();
+            //数乘矩阵等于矩阵乘数
+            b += -inv_sigma*inv_sigma*error*J;///kejioahuan
+            cost += error*error;
+        }
+        //Eigen的稠密头文件中包含的算法
+        Eigen::Vector3d dx = H.ldlt().solve(b);
+        if(isnan(dx[0])){
+            cout&lt;&lt;"result is nan!"&lt;&lt;endl;
+            break;
+        }
+        //迭代终止条件，当误差一直减小的时候
+        if (iter &gt;0 &amp;&amp; cost &gt;= lastcost){
+            cout&lt;&lt;"cost :"&lt;&lt;cost&lt;&lt;"&gt;= last cost :"&lt;&lt;lastcost&lt;&lt;",break."&lt;&lt;endl;
+            break;
+        }
+		//误差量的更新
+        ae += dx[0];
+        be += dx[1];
+        ce += dx[2];
+        lastcost =cost;
+        cout&lt;&lt;"total cost :"&lt;&lt;cost&lt;&lt;", \tupdate :"&lt;&lt;dx.transpose()&lt;&lt;",\t estimate:"&lt;&lt;ae&lt;&lt;","&lt;&lt;be&lt;&lt;","&lt;&lt;ce&lt;&lt;endl;
+    }
+    chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
+    chrono::duration&lt;double&gt; time_used = chrono::duration_cast&lt;chrono::duration&lt;double&gt;&gt;(t2-t1);
+    cout&lt;&lt;"solve time is :" &lt;&lt; time_used.count()&lt;&lt;"seconds"&lt;&lt;endl;
+    cout&lt;&lt;"ESTIMATE A,B,C:"&lt;&lt;ae&lt;&lt;","&lt;&lt;be&lt;&lt;","&lt;&lt;ce&lt;&lt;endl;
+    std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="1-3CmakeLists-txt"><a href="#1-3CmakeLists-txt" class="headerlink" title="1.3CmakeLists.txt"></a>1.3CmakeLists.txt</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cmake_minimum_required<span class="token punctuation">(</span>VERSION <span class="token number">3.20</span><span class="token punctuation">)</span>
+project<span class="token punctuation">(</span>optimization<span class="token punctuation">)</span>
+set<span class="token punctuation">(</span>CMAKE_CXX_STANDARD <span class="token number">14</span><span class="token punctuation">)</span>
+
+include_directories<span class="token punctuation">(</span><span class="token string">"/usr/include/eigen3"</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+add_executable<span class="token punctuation">(</span>optimization main.cpp<span class="token punctuation">)</span>
+
+find_package<span class="token punctuation">(</span>OpenCV REQUIRED<span class="token punctuation">)</span>
+if<span class="token punctuation">(</span>OpenCV_FOUND<span class="token punctuation">)</span>
+    target_link_libraries<span class="token punctuation">(</span>optimization <span class="token variable">${OpenCV_LIBRARIES}</span><span class="token punctuation">)</span>
+else<span class="token punctuation">(</span>OpenCV_FOUND<span class="token punctuation">)</span>
+    message<span class="token punctuation">(</span>FATAL_ERROR <span class="token string">"OpenCV library not found"</span><span class="token punctuation">)</span>
+endif <span class="token punctuation">(</span>OpenCV_FOUND<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="1-4运行结果如下："><a href="#1-4运行结果如下：" class="headerlink" title="1.4运行结果如下："></a>1.4运行结果如下：</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/home/wpf/SLAM/review_slam2/CPP_test/chapter0/optimization/cmake-build-debug/optimization
+total cost :3.19575e+06, 	update :0.0455771  <span class="token number">0.078164</span> -0.985329,	 estimate:2.04558,-0.921836,4.01467
+total cost :376785, 	update <span class="token builtin class-name">:</span> <span class="token number">0.065762</span>  <span class="token number">0.224972</span> -0.962521,	 estimate:2.11134,-0.696864,3.05215
+total cost :35673.6, 	update :-0.0670241   <span class="token number">0.617616</span>  -0.907497,	 estimate:2.04432,-0.0792484,2.14465
+total cost :2195.01, 	update :-0.522767   <span class="token number">1.19192</span> -0.756452,	 estimate:1.52155,1.11267,1.3882
+total cost :174.853, 	update :-0.537502  <span class="token number">0.909933</span> -0.386395,	 estimate:0.984045,2.0226,1.00181
+total cost :102.78, 	update :-0.0919666   <span class="token number">0.147331</span> -0.0573675,	 estimate:0.892079,2.16994,0.944438
+total cost :101.937, 	update :-0.00117081  <span class="token number">0.00196749</span> -0.00081055,	 estimate:0.890908,2.1719,0.943628
+total cost :101.937, 	update <span class="token builtin class-name">:</span>  <span class="token number">3</span>.4312e-06 -4.28555e-06  <span class="token number">1</span>.08348e-06,	 estimate:0.890912,2.1719,0.943629
+total cost :101.937, 	update :-2.01204e-08  <span class="token number">2</span>.68928e-08 -7.86602e-09,	 estimate:0.890912,2.1719,0.943629
+cost :101.93<span class="token operator"><span class="token file-descriptor important">7</span>&gt;</span><span class="token operator">=</span> last cost :101.937,break.
+solve <span class="token function">time</span> is :0.0036663seconds
+ESTIMATE A,B,C:0.890912,2.1719,0.943629
+Hello, World<span class="token operator">!</span>
+
+Process finished with <span class="token builtin class-name">exit</span> code <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="1-5将获得的数据进行绘图"><a href="#1-5将获得的数据进行绘图" class="headerlink" title="1.5将获得的数据进行绘图"></a>1.5将获得的数据进行绘图</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> math
+<span class="token comment">#导入数据</span>
+a <span class="token operator">=</span> np<span class="token punctuation">.</span>loadtxt<span class="token punctuation">(</span><span class="token string">'xy1.txt'</span><span class="token punctuation">)</span>
+b <span class="token operator">=</span> a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">100</span><span class="token punctuation">]</span>
+s <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span>
+c <span class="token operator">=</span> a<span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">:</span><span class="token number">200</span><span class="token punctuation">]</span>
+
+plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>label <span class="token operator">=</span> <span class="token string">'Gauss_white'</span><span class="token punctuation">)</span>
+y <span class="token operator">=</span> <span class="token punctuation">[</span>math<span class="token punctuation">.</span>exp<span class="token punctuation">(</span><span class="token number">0.890912</span><span class="token operator">*</span>x<span class="token operator">*</span>x<span class="token operator">+</span><span class="token number">2.1719</span><span class="token operator">*</span>x<span class="token operator">+</span><span class="token number">0.943629</span><span class="token punctuation">)</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> s<span class="token punctuation">]</span>
+
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>b<span class="token punctuation">,</span>y<span class="token punctuation">,</span>label <span class="token operator">=</span> <span class="token string">'Gauss_Newton'</span><span class="token punctuation">,</span>color<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">,</span>linewidth<span class="token operator">=</span><span class="token number">4.0</span><span class="token punctuation">,</span>linestyle<span class="token operator">=</span><span class="token string">'-.'</span><span class="token punctuation">)</span>
+
+y2 <span class="token operator">=</span> <span class="token punctuation">[</span>math<span class="token punctuation">.</span>exp<span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">**</span>i<span class="token operator">+</span><span class="token number">2</span><span class="token operator">*</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> s<span class="token punctuation">]</span>  <span class="token comment"># 真实值</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>b<span class="token punctuation">,</span>y2<span class="token punctuation">,</span>label <span class="token operator">=</span> <span class="token string">'Real'</span><span class="token punctuation">,</span>color<span class="token operator">=</span><span class="token string">'g'</span><span class="token punctuation">,</span>linewidth<span class="token operator">=</span><span class="token number">2.0</span><span class="token punctuation">,</span>linestyle<span class="token operator">=</span><span class="token string">'--'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'upper left'</span><span class="token punctuation">,</span> bbox_to_anchor<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlim<span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylim<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'y = exp(a*x*x+b*x+c)'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="1-6输出图像"><a href="#1-6输出图像" class="headerlink" title="1.6输出图像"></a>1.6输出图像</h3><p>略</p>
 
                 
             </div>
@@ -681,7 +813,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://feipf2020.github.io/2022/03/14/wang-luo-de-ji-ben-gai-nian-li-jie/">https://feipf2020.github.io/2022/03/14/wang-luo-de-ji-ben-gai-nian-li-jie/</a>
+                    <a href="https://feipf2020.github.io/2022/03/31/gao-si-niu-dun-fa-qiu-jie-ni-he-wen-ti/">https://feipf2020.github.io/2022/03/31/gao-si-niu-dun-fa-qiu-jie-ni-he-wen-ti/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -719,8 +851,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BD%91%E7%BB%9C/">
-                                    <span class="chip bg-color">网络</span>
+                                <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">优化算法</span>
+                                </a>
+                            
+                                <a href="/tags/SLAM%E6%8A%80%E6%9C%AF/">
+                                    <span class="chip bg-color">SLAM技术</span>
                                 </a>
                             
                         </div>
@@ -890,42 +1026,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2022/03/14/ben-zhan-shuo-ming/">
+                <a href="/2022/03/31/gao-si-niu-dun-fa-qiu-jie-ni-he-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="本站说明">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="高斯牛顿法求解拟合问题">
                         
-                        <span class="card-title">本站说明</span>
+                        <span class="card-title">高斯牛顿法求解拟合问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本站介绍及规则说明
+                            高斯牛顿法求解拟合问题基本案例实现
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-31
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            wpf
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/SLAM%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    SLAM技术
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E4%BD%BF%E7%94%A8%E5%BF%85%E7%9C%8B/">
-                        <span class="chip bg-color">使用必看</span>
+                    <a href="/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">优化算法</span>
+                    </a>
+                    
+                    <a href="/tags/SLAM%E6%8A%80%E6%9C%AF/">
+                        <span class="chip bg-color">SLAM技术</span>
                     </a>
                     
                 </div>
@@ -939,29 +1085,33 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/02/16/shu-ju-jie-gou-zhi-er-cha-shu/">
+                <a href="/2022/03/31/python-hua-tu-de-ku-zhi-matplotlib-shi-yong-yi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="数据结构之二叉树">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Python画图的库之matplotlib使用一">
                         
-                        <span class="card-title">数据结构之二叉树</span>
+                        <span class="card-title">Python画图的库之matplotlib使用一</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Python画图的库之matplotlib使用一，简单的基本画图框架
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-31
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            wpf
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -969,8 +1119,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
+                    <a href="/tags/%E7%94%BB%E5%9B%BE/">
+                        <span class="chip bg-color">画图</span>
+                    </a>
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%B7%A5%E5%85%B7%E6%8A%80%E6%9C%AF/">
+                        <span class="chip bg-color">工具技术</span>
                     </a>
                     
                 </div>
