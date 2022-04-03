@@ -603,21 +603,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-03-29
+                    2022-04-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    561
+                    498
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    3 Min
+                    2 Min
                 </div>
                 
 
@@ -668,9 +668,6 @@ Note, selecting <span class="token string">'nvidia-kernel-common-418-server'</sp
 。。。。。
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>可以参考这句话（未执行）</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sudo</span> <span class="token function">apt-get</span> autoremove --purge nvidia*<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <h3 id="2-2-第二步"><a href="#2-2-第二步" class="headerlink" title="2.2 第二步"></a>2.2 第二步</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">wpf@wpfpc:~$ <span class="token function">sudo</span> <span class="token function">apt-get</span> remove --purge nvidia*
 Reading package lists<span class="token punctuation">..</span>. Done
 Building dependency tree       
@@ -683,15 +680,8 @@ Note, selecting <span class="token string">'nvidia-driver-binary'</span> <span c
 。。。。。
 。。。。。。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="三，查看现有的显卡型号"><a href="#三，查看现有的显卡型号" class="headerlink" title="三，查看现有的显卡型号"></a>三，查看现有的显卡型号</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">wpf@wpfpc:~$ <span class="token function">sudo</span> <span class="token function">apt-get</span> remove --purge nvidia*
-Reading package lists<span class="token punctuation">..</span>. Done
-Building dependency tree       
-Reading state information<span class="token punctuation">..</span>. Done
-Note, selecting <span class="token string">'nvidia-kernel-common-418-server'</span> <span class="token keyword">for</span> glob <span class="token string">'nvidia*'</span>
-Note, selecting <span class="token string">'nvidia-325-updates'</span> <span class="token keyword">for</span> glob <span class="token string">'nvidia*'</span>
-Note, selecting <span class="token string">'nvidia-346-updates'</span> <span class="token keyword">for</span> glob <span class="token string">'nvidia*'</span>
-Note, selecting <span class="token string">'nvidia-driver-binary'</span> <span class="token keyword">for</span> glob <span class="token string">'nvidia*'</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="三，查看现有的显卡型号"><a href="#三，查看现有的显卡型号" class="headerlink" title="三，查看现有的显卡型号"></a>三，查看现有的显卡型号</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">wpf@wpfpc:~$ lspci <span class="token operator">|</span> <span class="token function">grep</span> -i nvidia
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="四，根据实际显卡型号，去官网下载驱动"><a href="#四，根据实际显卡型号，去官网下载驱动" class="headerlink" title="四，根据实际显卡型号，去官网下载驱动"></a>四，根据实际显卡型号，去官网下载驱动</h2><h3 id="4-1查看笔记本显卡型号"><a href="#4-1查看笔记本显卡型号" class="headerlink" title="4.1查看笔记本显卡型号"></a>4.1查看笔记本显卡型号</h3><p>本人笔记本电脑，显卡型号，NVIDIA RTX2060 显卡</p>
 <h3 id="4-2到官网下载对应型号，官网链接"><a href="#4-2到官网下载对应型号，官网链接" class="headerlink" title="4.2到官网下载对应型号，官网链接"></a>4.2到官网下载对应型号，<a target="_blank" rel="noopener" href="https://www.nvidia.cn/geforce/drivers/">官网链接</a></h3><p>下载版本：NVIDIA-Linux-x86_64-510.60.02.run</p>

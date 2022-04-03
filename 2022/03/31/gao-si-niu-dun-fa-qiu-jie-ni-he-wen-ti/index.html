@@ -603,14 +603,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2022-03-31
+                    2022-04-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    993
+                    994
                 </div>
                 
 
@@ -776,7 +776,7 @@ y <span class="token operator">=</span> <span class="token punctuation">[</span>
 
 plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>b<span class="token punctuation">,</span>y<span class="token punctuation">,</span>label <span class="token operator">=</span> <span class="token string">'Gauss_Newton'</span><span class="token punctuation">,</span>color<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">,</span>linewidth<span class="token operator">=</span><span class="token number">4.0</span><span class="token punctuation">,</span>linestyle<span class="token operator">=</span><span class="token string">'-.'</span><span class="token punctuation">)</span>
 
-y2 <span class="token operator">=</span> <span class="token punctuation">[</span>math<span class="token punctuation">.</span>exp<span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">**</span>i<span class="token operator">+</span><span class="token number">2</span><span class="token operator">*</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> s<span class="token punctuation">]</span>  <span class="token comment"># 真实值</span>
+y2 <span class="token operator">=</span> <span class="token punctuation">[</span>math<span class="token punctuation">.</span>exp<span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">*</span>i<span class="token operator">*</span>i<span class="token operator">+</span><span class="token number">2</span><span class="token operator">*</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> s<span class="token punctuation">]</span>  <span class="token comment"># 真实值</span>
 plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>b<span class="token punctuation">,</span>y2<span class="token punctuation">,</span>label <span class="token operator">=</span> <span class="token string">'Real'</span><span class="token punctuation">,</span>color<span class="token operator">=</span><span class="token string">'g'</span><span class="token punctuation">,</span>linewidth<span class="token operator">=</span><span class="token number">2.0</span><span class="token punctuation">,</span>linestyle<span class="token operator">=</span><span class="token string">'--'</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">'upper left'</span><span class="token punctuation">,</span> bbox_to_anchor<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>xlim<span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span>
