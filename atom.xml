@@ -6,7 +6,7 @@
   <link href="https://feipf2020.github.io/atom.xml" rel="self"/>
   
   <link href="https://feipf2020.github.io/"/>
-  <updated>2022-04-03T13:22:53.615Z</updated>
+  <updated>2022-06-22T03:07:42.480Z</updated>
   <id>https://feipf2020.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://feipf2020.github.io/2022/06/22/test/"/>
+    <id>https://feipf2020.github.io/2022/06/22/test/</id>
+    <published>2022-06-22T03:05:38.000Z</published>
+    <updated>2022-06-22T03:07:42.480Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;今天是个好日子&quot;&gt;&lt;a href=&quot;#今天是个好日子&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>高斯牛顿法求解拟合问题</title>
